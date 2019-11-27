@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Id": "PersonalizeS3BucketAccessPolicy",
+    "Statement": [
+        {
+            "Sid": "PersonalizeS3BucketAccessPolicy",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "personalize.amazonaws.com"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::bucket-name",
+                "arn:aws:s3:::bucket-name/*"
+            ]
+        }
+    ]
+}
